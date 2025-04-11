@@ -1260,9 +1260,9 @@ class SectionedIndentedText extends IndentedText {
     }
 }
 
-async function get_transaction_over_whole_period() {
+function get_transaction_over_whole_period() {
     months_classes = [
-        [24, SettledTransactionItems, 'settled transactions'],
+        [6, SettledTransactionItems, 'settled transactions'],
         [3, AuthorizedTransactionItems, 'authorized transactions'],
     ]
 
@@ -1300,7 +1300,7 @@ async function get_transaction_over_whole_period() {
     return texts;
 }
 
-async function main() {
+function main() {
     for (const text of get_transaction_over_whole_period()) {
         console.log(text);
     }
